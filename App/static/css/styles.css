@@ -1,70 +1,71 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif; /* Set a clean, readable font */
-    margin: 0; /* Remove default margin from body */
-    padding: 20px; /* Add some breathing room around the content */
+    font-family: Arial, sans-serif;
+    margin: 0;
   }
   
   header {
-    display: flex; /* Arrange header elements horizontally */
-    justify-content: space-between; /* Space elements evenly */
-    align-items: center; /* Align vertically */
-    background-color: #f0f0f0; /* Light gray background */
-    padding: 10px 20px; /* Add some padding for visual separation */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
   }
   
   header h1,
   header a {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
   }
   
   header a {
-    color: #000; /* Black text for links */
-    text-decoration: none; /* Remove underline from links */
+    color: whitesmoke;
+    text-decoration: none;
   }
   
   header h1 {
-    font-size: 24px; /* Adjust heading size as needed */
-    color: #333; /* Darker text for heading */
+    font-size: 24px;
+    color: whitesmoke;
   }
   
   nav {
-    flex: 1; /* Allow navigation to take up remaining space */
+    flex: 1;
   }
   
   h1 {
-    text-align: center; /* Center the main heading */
-    margin-top: 20px; /* Add some space after the header */
-    font-size: 20px; /* Adjust heading size as needed */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
   }
   
   form {
-    display: flex; /* Arrange form elements horizontally */
-    flex-direction: column; /* Stack elements vertically */
-    width: 50%; /* Set form width to half the viewport */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding for visual separation */
-    border: 1px solid #ccc; /* Light border around the form */
-    border-radius: 5px; /* Rounded corners for a softer look */
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
   
   h2 {
-    font-size: 18px; /* Adjust subheading size as needed */
-    margin-bottom: 10px; /* Add some space after subheadings */
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   
   input[type="radio"] {
-    margin-right: 10px; /* Add spacing between radio buttons and labels */
+    margin-right: 10px;
+    accent-color: #333333;
   }
   
   button[type="submit"] {
-    background-color: #333; /* Darker blue for the submit button */
-    color: #fff; /* White text for submit button */
-    padding: 10px 20px; /* Adjust button padding */
-    border: none; /* Remove default button border */
-    border-radius: 5px; /* Rounded corners for buttons */
-    cursor: pointer; /* Indicate clickable action */
-    margin-top: 15px; /* Add spacing above the button */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    margin-top: 15px;
   }
