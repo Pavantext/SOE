@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Set a clean, readable font */
+    margin: 0; /* Remove default margin from body */
+    padding: 20px; /* Add some breathing room around the content */
+  }
+  
+  header {
+    display: flex; /* Arrange header elements horizontally */
+    justify-content: space-between; /* Space elements evenly */
+    align-items: center; /* Align vertically */
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px 20px; /* Add some padding for visual separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  header h1,
+  header a {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  header a {
+    color: #000; /* Black text for links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  header h1 {
+    font-size: 24px; /* Adjust heading size as needed */
+    color: #333; /* Darker text for heading */
+  }
+  
+  nav {
+    flex: 1; /* Allow navigation to take up remaining space */
+  }
+  
+  h1 {
+    text-align: center; /* Center the main heading */
+    margin-top: 20px; /* Add some space after the header */
+    font-size: 20px; /* Adjust heading size as needed */
+  }
+  
+  form {
+    display: flex; /* Arrange form elements horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    width: 50%; /* Set form width to half the viewport */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding for visual separation */
+    border: 1px solid #ccc; /* Light border around the form */
+    border-radius: 5px; /* Rounded corners for a softer look */
+  }
+  
+  h2 {
+    font-size: 18px; /* Adjust subheading size as needed */
+    margin-bottom: 10px; /* Add some space after subheadings */
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px; /* Add spacing between radio buttons and labels */
+  }
+  
+  button[type="submit"] {
+    background-color: #333; /* Darker blue for the submit button */
+    color: #fff; /* White text for submit button */
+    padding: 10px 20px; /* Adjust button padding */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Indicate clickable action */
+    margin-top: 15px; /* Add spacing above the button */
+  }

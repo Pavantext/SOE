@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="https://statueofequality.org">HOME</a>
+        </div>
+        <nav>
+            <h1>Feedback Form</h1>
+        </nav>
+    </header>
+        <h1>Please fill out the form below to give us feedback on your experience with the Statue of Equality.</h1>
+            <form action="" method="post">
+            {% csrf_token %}
+        <div>
+            <h2>Have you booked entry passes online?</h2>
+            <input type="radio" name="booking" value="yes">Yes
+            <input type="radio" name="booking" value="no">No
+            <h2>Have you attended "Arjitha Seva	?"</h2>
+            <input type="radio" name="seva" value="yes">Yes
+            <input type="radio" name="seva" value="no">No
+            <h2>Have you attended "Nithya Seva Kainkaryam"?</h2>
+            <input type="radio" name="seva" value="yes">Yes
+            <input type="radio" name="seva" value="no">No
+            {{ form.as_p }}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
