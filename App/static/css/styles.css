@@ -61,11 +61,19 @@ body {
   }
   
   button[type="submit"] {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: whitesmoke;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer; 
     margin-top: 15px;
+    width: 100%;
+    transition: backgroung-color 0.3s ease;
+    
   }
+
+  button[type="submit"]:hover {
+    background-color: darken(var(--primary-color), 10%);
+    color: #333333;
+}

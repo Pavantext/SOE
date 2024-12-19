@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statue of Equality - Feedback</title>
+    <link rel="stylesheet" href="{% static 'css/feedback_styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://statueofequality.org">
+                <img src="{% static 'images/logo.png' %}" alt="Statue of Equality">
+            </a>
+        </div>
+        <h1>Share Your Experience</h1>
+    </header>
+
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post" class="feedback-form">
+            {% csrf_token %}
+            <div class="rating-group">
+                <label>Overall Experience</label>
+                <div class="emoji-rating" data-field="overall_experience">
+                    <input type="radio" name="overall_experience" value="1" id="overall_1"><label for="overall_1">😢</label>
+                    <input type="radio" name="overall_experience" value="2" id="overall_2"><label for="overall_2">😕</label>
+                    <input type="radio" name="overall_experience" value="3" id="overall_3"><label for="overall_3">😐</label>
+                    <input type="radio" name="overall_experience" value="4" id="overall_4"><label for="overall_4">😊</label>
+                    <input type="radio" name="overall_experience" value="5" id="overall_5"><label for="overall_5">😍</label>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>Cleanliness</label>
+                <div class="emoji-rating" data-field="cleanliness_rating">
+                    <input type="radio" name="cleanliness_rating" value="1" id="clean_1"><label for="clean_1">😢</label>
+                    <input type="radio" name="cleanliness_rating" value="2" id="clean_2"><label for="clean_2">😕</label>
+                    <input type="radio" name="cleanliness_rating" value="3" id="clean_3"><label for="clean_3">😐</label>
+                    <input type="radio" name="cleanliness_rating" value="4" id="clean_4"><label for="clean_4">😊</label>
+                    <input type="radio" name="cleanliness_rating" value="5" id="clean_5"><label for="clean_5">😍</label>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>Staff Friendliness</label>
+                <div class="emoji-rating" data-field="staff_rating">
+                    <input type="radio" name="staff_rating" value="1" id="staff_1"><label for="staff_1">😢</label>
+                    <input type="radio" name="staff_rating" value="2" id="staff_2"><label for="staff_2">😕</label>
+                    <input type="radio" name="staff_rating" value="3" id="staff_3"><label for="staff_3">😐</label>
+                    <input type="radio" name="staff_rating" value="4" id="staff_4"><label for="staff_4">😊</label>
+                    <input type="radio" name="staff_rating" value="5" id="staff_5"><label for="staff_5">😍</label>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label>Facilities</label>
+                <div class="emoji-rating" data-field="facilities_rating">
+                    <input type="radio" name="facilities_rating" value="1" id="facilities_1"><label for="facilities_1">😢</label>
+                    <input type="radio" name="facilities_rating" value="2" id="facilities_2"><label for="facilities_2">😕</label>
+                    <input type="radio" name="facilities_rating" value="3" id="facilities_3"><label for="facilities_3">😐</label>
+                    <input type="radio" name="facilities_rating" value="4" id="facilities_4"><label for="facilities_4">😊</label>
+                    <input type="radio" name="facilities_rating" value="5" id="facilities_5"><label for="facilities_5">😍</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.comments.id_for_label }}">Additional Comments</label>
+                {{ form.comments }}
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html> 

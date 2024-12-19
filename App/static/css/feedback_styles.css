@@ -1,0 +1,171 @@
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --dark-color: #2C3E50;
+    --light-color: #ECF0F1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: whitesmoke;
+}
+
+header {
+    background-color: #333333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo img {
+    height: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.feedback-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.rating-group {
+    margin-bottom: 2rem;
+}
+
+.emoji-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.emoji-rating input[type="radio"] {
+    display: none;
+}
+
+.emoji-rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.emoji-rating label:hover {
+    transform: scale(1.2);
+}
+
+.emoji-rating input[type="radio"]:checked + label {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+.emoji-rating label {
+    filter: grayscale(1);
+}
+
+button[type="submit"] {
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: darken(var(--primary-color), 10%);
+    color: #333333;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem auto;
+    }
+    
+    .feedback-form {
+        padding: 1rem;
+    }
+    
+    .emoji-rating label {
+        font-size: 1.5rem;
+    }
+} 
+
+.thank-you-container {
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    color: var(--dark-color);
+}
+
+.thank-you-container h1 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #333333;
+    color: whitesmoke;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #4a4a4a;
+} 
